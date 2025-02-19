@@ -27,29 +27,42 @@ body{
     padding: 10px 5%;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative; 
 }
-
 .logo{
     width: 300px;
     height: 60px;
 }
 
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+    transition: 0.4s;
+}
 
 @media (max-width: 768px) {
     .burger {
-        display: block; 
+        display: flex;
         position: absolute;
         right: 20px;
         top: 20px;
     }
 
     nav ul {
-        display: none; 
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -61,7 +74,12 @@ nav{
     }
 
     nav ul.show {
-        display: flex; 
+        display: flex;
+    }
+
+    .logo{
+        width: 200px;
+        height: 60px;
     }
 }
 
