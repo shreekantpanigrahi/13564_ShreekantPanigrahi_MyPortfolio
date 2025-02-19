@@ -44,9 +44,9 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium doloribus ratione amet repellendus facere cumque dolores totam placeat? Veritatis, sunt vel. Accusantium voluptate quisquam, reprehenderit eius distinctio voluptates rerum dolore eos error ipsum officia. Laudantium nam dolore dolores facere nihil ab deserunt iusto unde, quasi fuga et architecto alias consectetur distinctio quaerat dolorem illo delectus, aperiam minus. Sit consequuntur a, velit iusto ipsum perferendis veniam laborum consequatur deleniti repellat omnis, error, molestias corporis deserunt cupiditate sunt qui aliquam. Et voluptas quae suscipit molestiae magnam impedit accusantium necessitatibus eaque possimus nobis vel, doloremque tenetur iste adipisci numquam nesciunt omnis facilis at.</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" data-tab="skills">Skills</p>
+                        <p class="tab-links" data-tab="experience">Experience</p>
+                        <p class="tab-links" data-tab="education">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -156,43 +156,6 @@
 <div id="footer">
     <p>&copy; 2024 Shreekant Panigrahi | All Rights Reserved.</p>
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var tablinks = document.getElementsByClassName('tab-links');
-    var tabcontents = document.getElementsByClassName('tab-contents');
-
-    function opentab(event, tabname) {
-        for (let tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (let tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('nav ul');
-
-    if (burger && nav) {
-        burger.addEventListener('click', function() {
-            nav.classList.toggle('show');
-        });
-    }
-
-    
-    let tabItems = document.querySelectorAll('.tab-links');
-    tabItems.forEach(item => {
-        item.addEventListener('click', function(event) {
-            const tabname = this.getAttribute('data-tab');
-            opentab(event, tabname);
-        });
-    });
-});
-
-</script>
 <script src="./index.js"></script>
 </body>
 </html>

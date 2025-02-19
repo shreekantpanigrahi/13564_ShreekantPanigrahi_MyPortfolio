@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById(tabname).classList.add("active-tab");
     }
 
-    // Hamburger menu functionality
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('nav ul');
 
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
     let tabItems = document.querySelectorAll('.tab-links');
     tabItems.forEach(item => {
         item.addEventListener('click', function(event) {
