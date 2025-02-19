@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var tablinks = document.getElementsByClassName('tab-links');
     var tabcontents = document.getElementsByClassName('tab-contents');
 
-    function opentab(event, tabname) { // Add event parameter
+    function opentab(event, tabname) {
         for (let tablink of tablinks) {
             tablink.classList.remove("active-link");
         }
@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Attach tab event listeners (if your HTML has tab links)
+    
     let tabItems = document.querySelectorAll('.tab-links');
     tabItems.forEach(item => {
         item.addEventListener('click', function(event) {
-            const tabname = this.getAttribute('data-tab'); // Assuming you use data attributes
+            const tabname = this.getAttribute('data-tab');
             opentab(event, tabname);
         });
     });
